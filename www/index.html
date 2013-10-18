@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Icons</title>
+    <!--
+    <script id="microloader" type="text/javascript" src="lib/touch/microloader/development.js"></script>
+    -->
+    <script type="text/javascript" charset="utf-8" src="lib/cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+        
+        
+        function onDeviceReady() {
+            navigator.notification.alert(
+                                         'Cordova is ready!',       // message
+                                         function() {//do something},  // callback
+                                         'Congratulations',            // title
+                                         'Done'                      // buttonName
+                                         );
+//            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        }
+        /*
+        function onSuccess(position) {
+            var element = document.getElementById('geolocation');
+            element.innerHTML = 'Latitude: '+ position.coords.latitude+ '<br />' +
+            'Longitude: '          + position.coords.longitude             + '<br />' +
+            'Altitude: '           + position.coords.altitude              + '<br />' +
+            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+            'Heading: '            + position.coords.heading               + '<br />' +
+            'Speed: '              + position.coords.speed                 + '<br />' +
+            'Timestamp: '          + position.timestamp                    + '<br />'; 
+        }
+        function onError(error) {
+            var element = document.getElementById('geolocation');
+            element.innerHTML = 'code: '    + error.code    + '<br />' +
+                  'message: ' + error.message + '<br />';
+        }
+         */
+    </script>
+</head>
+<body onload=”onLoad();”>
+    <p id="geolocation">Finding geolocation..</p>
+</body>
+</html>
